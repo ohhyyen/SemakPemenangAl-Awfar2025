@@ -18,6 +18,9 @@ export default {
       },
     },
     extend: {
+      fontFamily: {
+        sans: ["Poppins", "sans-serif"], // Menambahkan Poppins sebagai font sans-serif default
+      },
       colors: {
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
