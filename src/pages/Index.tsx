@@ -12,7 +12,7 @@ const Index = () => {
     <div className="min-h-screen flex flex-col items-center justify-center bg-bank-islam-red p-4">
       <div className="text-center bg-bank-islam-red-dark p-8 rounded-lg shadow-md flex flex-col items-center">
         <h1 className="text-6xl font-extrabold text-primary mb-2 drop-shadow-lg">TAHNIAH</h1>
-        <p className="text-3xl font-semibold text-primary mb-6 drop-shadow-lg">kepada para pemenang Al-Awfar 2025</p> {/* ADDED: Teks baru dengan font lebih kecil */}
+        <p className="text-2xl font-semibold text-primary mb-6 drop-shadow-lg">kepada para pemenang Al-Awfar 2025</p> {/* Diperbarui: Mengurangi ukuran font */}
         <Link to="/winner">
           <Button className="bg-primary hover:bg-primary/90 text-primary-foreground text-lg py-3 px-6 rounded-md transition-colors duration-300">
             Lihat Halaman Pemenang
