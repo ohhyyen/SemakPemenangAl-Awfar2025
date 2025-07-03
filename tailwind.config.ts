@@ -62,6 +62,11 @@ export default {
           border: "hsl(var(--sidebar-border))",
           ring: "hsl(var(--sidebar-ring))",
         },
+        "bank-islam-red": {
+          DEFAULT: "hsl(var(--bank-islam-red))",
+          light: "hsl(var(--bank-islam-red-light))",
+          dark: "hsl(var(--bank-islam-red-dark))",
+        },
       },
       borderRadius: {
         lg: "var(--radius)",
