@@ -8,7 +8,7 @@ import { Trophy } from "lucide-react";
 
 const WinnerPage = () => {
   return (
-    <div className="min-h-screen flex flex-col items-center justify-center bg-gradient-to-br from-red-500 to-red-700 p-4">
+    <div className="min-h-screen flex flex-col items-center justify-center bg-gradient-to-br from-red-500 to-white p-4">
       <Card className="w-full max-w-md text-center shadow-lg animate-fade-in-up">
         <CardHeader className="bg-yellow-400 rounded-t-lg p-6">
           <Trophy className="mx-auto h-16 w-16 text-white drop-shadow-md" />
