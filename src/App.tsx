@@ -7,7 +7,7 @@ import Index from "./pages/Index";
 import NotFound from "./pages/NotFound";
 import WinnerPage from "./pages/WinnerPage";
 import ContactPage from "./pages/ContactPage";
-import LoginPage from "./pages/LoginPage";
+import LoginPage from "./pages/Login";
 import { AppLayout } from "./components/AppLayout";
 
 const queryClient = new QueryClient();
