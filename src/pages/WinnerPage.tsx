@@ -20,11 +20,11 @@ const WinnerPage = () => {
           <span className="block text-4xl font-bold text-primary my-2">100 PEMENANG SAGU HATI</span>
         </p>
         <p className="text-foreground text-base mb-6">
-          Terima kasih atas penyertaan anda! Sila hubungi kami untuk maklumat lanjut mengenai penebusan hadiah anda.
+          Terima kasih atas penyertaan anda! Sila log masuk untuk maklumat lanjut mengenai penebusan hadiah anda.
         </p>
-        <Link to="/">
+        <Link to="/login">
           <Button className="w-full bg-primary hover:bg-primary/90 text-primary-foreground text-lg py-3 rounded-md transition-colors duration-300">
-            Kembali ke Laman Utama
+            Log Masuk
           </Button>
         </Link>
       </CardContent>

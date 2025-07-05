@@ -7,6 +7,7 @@ import Index from "./pages/Index";
 import NotFound from "./pages/NotFound";
 import WinnerPage from "./pages/WinnerPage";
 import ContactPage from "./pages/ContactPage";
+import LoginPage from "./pages/LoginPage";
 import { AppLayout } from "./components/AppLayout";
 
 const queryClient = new QueryClient();
@@ -22,6 +23,7 @@ const App = () => (
             <Route path="/" element={<Index />} />
             <Route path="/winner" element={<WinnerPage />} />
             <Route path="/contact" element={<ContactPage />} />
+            <Route path="/login" element={<LoginPage />} />
           </Route>
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
