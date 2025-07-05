@@ -3,9 +3,7 @@ import { Link } from "react-router-dom";
 export const Logo = () => {
   return (
     <Link to="/">
-      <div className="bg-white text-black font-bold p-2">
-        LOGO DI SINI
-      </div>
+      <img src="/BIMB-Logo-Main.png" alt="BIMB Logo" className="h-8 w-auto" />
     </Link>
   );
 };
