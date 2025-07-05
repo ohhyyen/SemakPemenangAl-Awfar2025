@@ -10,14 +10,14 @@ const LoginPage = () => {
       <CardHeader>
         <CardTitle className="text-2xl font-bold text-foreground">Log Masuk</CardTitle>
         <CardDescription className="text-foreground/80">
-          Masukkan nombor kad pengenalan dan kata laluan anda.
+          Masukkan nama pengguna dan kata laluan anda.
         </CardDescription>
       </CardHeader>
       <CardContent>
         <div className="space-y-4">
           <div className="space-y-2">
-            <Label htmlFor="ic-number" className="text-foreground">No. Kad Pengenalan</Label>
-            <Input id="ic-number" placeholder="Contoh: 900101-01-1234" required className="bg-bank-islam-red-light border-bank-islam-red-dark placeholder:text-foreground/50" />
+            <Label htmlFor="username" className="text-foreground">Username</Label>
+            <Input id="username" placeholder="Masukkan nama pengguna anda" required className="bg-bank-islam-red-light border-bank-islam-red-dark placeholder:text-foreground/50" />
           </div>
           <div className="space-y-2">
             <Label htmlFor="password" className="text-foreground">Kata Laluan</Label>
