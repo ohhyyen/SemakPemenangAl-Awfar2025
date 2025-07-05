@@ -4,9 +4,9 @@
 
 @layer base {
   :root {
-    --bank-islam-red: 342 100% 31.4%; /* #A00030 */
-    --bank-islam-red-light: 342 100% 34.5%; /* #B00038 */
-    --bank-islam-red-dark: 342 100% 25.1%; /* #800028 */
+    --bank-islam-red: 337 79% 48%; /* #D81B60 */
+    --bank-islam-red-light: 337 79% 51.1%; /* #DD3270 */
+    --bank-islam-red-dark: 337 79% 41.7%; /* #BE1854 */
 
     --background: var(--bank-islam-red);
     --foreground: 0 0% 98%; /* Near white */
