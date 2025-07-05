@@ -6,7 +6,7 @@ import { Label } from "@/components/ui/label";
 import { showError, showSuccess } from "@/utils/toast";
 import { supabase } from "@/lib/supabase";
 
-const LoginPage = () => {
+const LoginPage: React.FC = () => {
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
   const [isLoading, setIsLoading] = useState(false);
