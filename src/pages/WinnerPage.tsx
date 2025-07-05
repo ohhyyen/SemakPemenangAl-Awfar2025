@@ -5,36 +5,30 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { Trophy } from "lucide-react";
-import { Header } from "@/components/Header";
 
 const WinnerPage = () => {
   return (
-    <div className="min-h-screen flex flex-col bg-bank-islam-red">
-      <Header />
-      <main className="flex-grow flex flex-col items-center justify-center p-4">
-        <Card className="w-full max-w-md text-center shadow-lg animate-fade-in-up">
-          <CardHeader className="bg-bank-islam-red-light rounded-t-lg p-6">
-            <Trophy className="mx-auto h-16 w-16 text-foreground drop-shadow-md" />
-            <CardTitle className="text-3xl font-extrabold text-foreground mt-4">TAHNIAH!</CardTitle>
-            <CardDescription className="text-foreground text-lg">Cabutan Al Afwar 2025</CardDescription>
-          </CardHeader>
-          <CardContent className="p-6">
-            <p className="text-foreground text-xl font-semibold mb-4">
-              Anda adalah salah seorang dari
-              <span className="block text-4xl font-bold text-primary my-2">100 PEMENANG SAGU HATI</span>
-            </p>
-            <p className="text-foreground text-base mb-6">
-              Terima kasih atas penyertaan anda! Sila hubungi kami untuk maklumat lanjut mengenai penebusan hadiah anda.
-            </p>
-            <Link to="/">
-              <Button className="w-full bg-primary hover:bg-primary/90 text-primary-foreground text-lg py-3 rounded-md transition-colors duration-300">
-                Kembali ke Laman Utama
-              </Button>
-            </Link>
-          </CardContent>
-        </Card>
-      </main>
-    </div>
+    <Card className="w-full max-w-md text-center shadow-lg animate-fade-in-up">
+      <CardHeader className="bg-bank-islam-red-light rounded-t-lg p-6">
+        <Trophy className="mx-auto h-16 w-16 text-foreground drop-shadow-md" />
+        <CardTitle className="text-3xl font-extrabold text-foreground mt-4">TAHNIAH!</CardTitle>
+        <CardDescription className="text-foreground text-lg">Cabutan Al Afwar 2025</CardDescription>
+      </CardHeader>
+      <CardContent className="p-6">
+        <p className="text-foreground text-xl font-semibold mb-4">
+          Anda adalah salah seorang dari
+          <span className="block text-4xl font-bold text-primary my-2">100 PEMENANG SAGU HATI</span>
+        </p>
+        <p className="text-foreground text-base mb-6">
+          Terima kasih atas penyertaan anda! Sila hubungi kami untuk maklumat lanjut mengenai penebusan hadiah anda.
+        </p>
+        <Link to="/">
+          <Button className="w-full bg-primary hover:bg-primary/90 text-primary-foreground text-lg py-3 rounded-md transition-colors duration-300">
+            Kembali ke Laman Utama
+          </Button>
+        </Link>
+      </CardContent>
+    </Card>
   );
 };
 
