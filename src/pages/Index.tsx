@@ -20,6 +20,11 @@ const Index = () => {
           <p className="text-base font-normal text-primary mb-6 drop-shadow-lg">
             Kepada Para Pemenang Al-Awfar 2025
           </p>
+          <img
+            src="/pemenang-al-awfar.png"
+            alt="Para Pemenang Al-Awfar"
+            className="rounded-lg shadow-lg mb-6 w-full max-w-lg"
+          />
           <Link to="/winner">
             <Button className="bg-primary hover:bg-primary/90 text-primary-foreground text-lg py-3 px-6 rounded-md transition-colors duration-300">
               Lihat Halaman Pemenang
