@@ -1,0 +1,1 @@
+Sila letakkan aset statik seperti imej di dalam direktori ini.

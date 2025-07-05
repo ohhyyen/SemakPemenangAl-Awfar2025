@@ -3,6 +3,7 @@ import { MadeWithDyad } from "@/components/made-with-dyad";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import React from "react";
+import PemenangImage from "@/assets/pemenang-al-awfar.png";
 
 const Index = () => {
   React.useEffect(() => {
@@ -21,7 +22,7 @@ const Index = () => {
             Kepada Para Pemenang Al-Awfar 2025
           </p>
           <img
-            src="/pemenang-al-awfar.png"
+            src={PemenangImage}
             alt="Para Pemenang Al-Awfar"
             className="rounded-lg shadow-lg mb-6 w-full max-w-lg"
           />
