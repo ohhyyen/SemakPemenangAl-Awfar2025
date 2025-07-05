@@ -7,7 +7,7 @@
     --bank-islam-red: 337 79% 48%; /* #D81B60 */
     --bank-islam-red-light: 337 79% 51.1%; /* #DD3270 */
     --bank-islam-red-dark: 337 79% 41.7%; /* #BE1854 */
-    --bank-islam-red-glow: 337 85% 70%; /* Warna kilauan yang lebih cerah - Ditingkatkan kecerahan */
+    --bank-islam-red-glow: 337 95% 78%; /* Warna kilauan yang lebih cerah & pekat */
 
     --background: var(--bank-islam-red);
     --foreground: 0 0% 98%; /* Near white */
@@ -97,7 +97,7 @@
   body {
     @apply text-foreground font-sans;
     background-color: hsl(var(--background));
-    background-image: radial-gradient(ellipse at center, hsl(var(--bank-islam-red-glow)), hsl(var(--background)) 60%);
+    background-image: radial-gradient(ellipse at center, hsl(var(--bank-islam-red-glow)), hsl(var(--background)) 45%);
     min-height: 100vh;
   }
 }
