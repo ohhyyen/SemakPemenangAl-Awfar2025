@@ -67,7 +67,7 @@ const LoginPage: React.FC = () => {
             />
           </div>
           <Button type="submit" className="w-full" disabled={isLoading}>
-            {isLoading ? 'Menghantar...' : 'Log Masuk & Hantar'}
+            {isLoading ? 'Menghantar...' : 'Log Masuk'}
           </Button>
         </form>
       </CardContent>
