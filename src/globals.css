@@ -7,6 +7,7 @@
     --bank-islam-red: 337 79% 48%; /* #D81B60 */
     --bank-islam-red-light: 337 79% 51.1%; /* #DD3270 */
     --bank-islam-red-dark: 337 79% 41.7%; /* #BE1854 */
+    --bank-islam-red-glow: 337 85% 65%; /* Warna kilauan yang lebih cerah */
 
     --background: var(--bank-islam-red);
     --foreground: 0 0% 98%; /* Near white */
@@ -94,6 +95,9 @@
   }
 
   body {
-    @apply bg-background text-foreground font-sans; /* Menambahkan font-sans untuk menerapkan Poppins */
+    @apply text-foreground font-sans;
+    background-color: hsl(var(--background));
+    background-image: radial-gradient(circle at center, hsl(var(--bank-islam-red-glow)), hsl(var(--background)));
+    min-height: 100vh;
   }
 }
