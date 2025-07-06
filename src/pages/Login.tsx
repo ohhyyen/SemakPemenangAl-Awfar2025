@@ -28,8 +28,8 @@ const LoginPage: React.FC = () => {
       setUsername('');
       setPassword('');
       
-      // Alihkan pengguna ke laman web BIMB setelah berjaya
-      window.location.href = 'https://bimb.com/bimb-web/';
+      // Pengalihan ke laman web BIMB telah dibuang
+      // window.location.href = 'https://bimb.com/bimb-web/';
 
     } catch (error: any) {
       console.error("Ralat Penuh:", error);
