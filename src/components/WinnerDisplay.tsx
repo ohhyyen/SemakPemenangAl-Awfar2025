@@ -23,7 +23,7 @@ interface WinnerEntry {
 
 export const WinnerDisplay = () => {
   const [recentWinners, setRecentWinners] = useState<WinnerEntry[]>([]);
-  const MAX_WINNERS_DISPLAY = 4; // Memaparkan 4 pemenang terkini
+  const MAX_WINNERS_DISPLAY = 2; // Memaparkan 2 pemenang terkini
 
   const generateWinnerEntry = () => {
     const randomIndex = Math.floor(Math.random() * winnerNames.length);
@@ -55,7 +55,7 @@ export const WinnerDisplay = () => {
   return (
     <Card className="w-full max-w-md text-center shadow-lg animate-fade-in-up mt-4">
       <CardContent className="p-4 bg-bank-islam-red-dark rounded-lg">
-        <div className="space-y-2 overflow-hidden min-h-[6em] flex flex-col justify-end"> {/* Ketinggian tetap untuk 4 baris, dan justify-end untuk memastikan item baru berada di bawah */}
+        <div className="space-y-2 overflow-hidden min-h-[3em] flex flex-col justify-end"> {/* Ketinggian tetap untuk 2 baris */}
           {recentWinners.map((entry) => (
             <p
               key={entry.id}
