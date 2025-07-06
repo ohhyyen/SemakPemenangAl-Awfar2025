@@ -13,7 +13,7 @@ const Index = () => {
         <div className="p-6">
           <div className="bg-bank-islam-red-dark p-4 rounded-lg my-4">
             <h1 className="text-6xl font-extrabold text-foreground">TAHNIAH!</h1>
-            <p className="text-foreground text-lg mt-2">Para Pemenang Cabutan Al-Awfar 2025</p>
+            <p className="text-foreground text-lg mt-2">Semua Para Pemenang Cabutan Al-Awfar 2025</p>
           </div>
           
           <img 
