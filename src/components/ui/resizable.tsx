@@ -30,12 +30,12 @@ const ResizablePanel = React.forwardRef<
 ))
 ResizablePanel.displayName = "ResizablePanel"
 
-interface ResizableHandleProps extends React.ComponentPropsWithoutRef<typeof PanelResizeHandle> {
+interface ResizableHandleProps extends React.ComponentPropsWithRef<typeof PanelResizeHandle> { // Mengubah kepada ComponentPropsWithRef
   withHandle?: boolean;
 }
 
 const ResizableHandle = React.forwardRef<
-  HTMLDivElement, // Mengubah jenis ref kepada HTMLDivElement
+  React.ElementRef<typeof PanelResizeHandle>,
   ResizableHandleProps
 >(({ className, withHandle, ...props }, ref) => (
   <PanelResizeHandle

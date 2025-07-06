@@ -39,7 +39,7 @@ export const WinnerDisplay = () => {
   return (
     <Card className="w-full max-w-md text-center shadow-lg animate-fade-in-up mt-4">
       <CardContent className="p-4 bg-bank-islam-red-dark rounded-lg">
-        <p className="text-foreground text-lg font-semibold">
+        <p className="text-foreground text-sm font-normal">
           {currentWinner}
         </p>
       </CardContent>
