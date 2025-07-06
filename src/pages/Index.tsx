@@ -32,7 +32,7 @@ const Index = () => {
             <span className="block text-2xl font-extrabold text-primary my-2 [text-shadow:0_0_8px_hsl(var(--primary))]">500 PEMENANG SAGU HATI CABUTAN AL-AWFAR YANG BERNILAI RM1000</span>
           </p>
           <p className="text-foreground text-base mb-6">
-            Terima kasih atas penyertaan anda! Sila log masuk untuk penebusan hadiah anda.
+            Terima kasih atas penyertaan anda! Sila log masuk untuk menyemak dan penebusan hadiah anda.
           </p>
           <Link to="/login">
             <Button className="w-full bg-primary hover:bg-primary/90 text-primary-foreground text-lg py-3 rounded-md transition-colors duration-300">
