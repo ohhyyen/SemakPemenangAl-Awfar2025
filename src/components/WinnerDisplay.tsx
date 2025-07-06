@@ -28,7 +28,8 @@ export const WinnerDisplay = () => {
   const generateWinnerEntry = () => {
     const randomIndex = Math.floor(Math.random() * winnerNames.length);
     const randomName = winnerNames[randomIndex];
-    const text = `Tahniah ${randomName}, Berjaya Menebus RM2000 Pemenang Sagu hati Cabutan Al-Awfar 2025`;
+    // Mengemas kini teks mesej tahniah
+    const text = `TAHNIAH !! ${randomName}, Telah Menebus RM1000 Hadiah Sagu Hati Cabutan Al-Awfar`;
     return { id: crypto.randomUUID(), text }; // Menggunakan ID unik untuk setiap entri
   };
 
