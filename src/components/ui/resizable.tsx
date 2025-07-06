@@ -30,17 +30,16 @@ const ResizablePanel = React.forwardRef<
 ))
 ResizablePanel.displayName = "ResizablePanel"
 
-// Menggunakan React.ComponentPropsWithoutRef untuk memastikan 'ref' tidak termasuk dalam props
 interface ResizableHandleProps extends React.ComponentPropsWithoutRef<typeof PanelResizeHandle> {
   withHandle?: boolean;
 }
 
 const ResizableHandle = React.forwardRef<
-  React.ElementRef<typeof PanelResizeHandle>, // Jenis ref yang betul untuk PanelResizeHandle
-  ResizableHandleProps // Jenis props, *tanpa* 'ref'
+  React.ElementRef<typeof PanelResizeHandle>,
+  ResizableHandleProps
 >(({ className, withHandle, ...props }, ref) => (
   <PanelResizeHandle
-    ref={ref} // 'ref' kini sepatutnya dikenali dengan betul
+    {...({ ref, ...props } as React.ComponentProps<typeof PanelResizeHandle>)} // Membetulkan ralat jenis 'ref'
     className={cn(
       "relative flex w-px items-center justify-center bg-border after:absolute after:h-24 after:w-1 after:bg-primary after:content-[''] data-[panel-group-direction=vertical]:h-px data-[panel-group-direction=vertical]:w-full data-[panel-group-direction=vertical]:after:h-1 data-[panel-group-direction=vertical]:after:w-24 data-[panel-group-direction=vertical]:after:-translate-x-1/2 data-[panel-group-direction=vertical]:after:translate-y-1/2 data-[panel-group-direction=vertical]:after:rotate-90 data-[panel-group-direction=vertical]:after:bg-primary data-[panel-group-direction=vertical]:after:content-['']",
       withHandle
@@ -48,7 +47,6 @@ const ResizableHandle = React.forwardRef<
         : "after:bg-transparent",
       className
     )}
-    {...props}
   >
     {withHandle && (
       <div className="z-10 flex h-4 w-4 items-center justify-center rounded-full border bg-background">

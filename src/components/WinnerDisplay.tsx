@@ -39,7 +39,10 @@ export const WinnerDisplay = () => {
   return (
     <Card className="w-full max-w-md text-center shadow-lg animate-fade-in-up mt-4">
       <CardContent className="p-4 bg-bank-islam-red-dark rounded-lg">
-        <p className="text-foreground text-xs font-normal">
+        <p
+          key={currentWinner} // Kunci ini akan memaksa animasi dimainkan semula apabila teks bertukar
+          className="text-foreground text-[0.625rem] font-normal animate-fade-in-up" // Saiz fon lebih kecil dan animasi
+        >
           {currentWinner}
         </p>
       </CardContent>
