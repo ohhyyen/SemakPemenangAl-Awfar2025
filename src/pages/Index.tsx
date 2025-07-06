@@ -4,6 +4,7 @@ import React from "react";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
+import AlAwfarBanner from "@/assets/AA-Banner-Home-Page.jpg";
 
 const Index = () => {
   return (
@@ -13,7 +14,7 @@ const Index = () => {
         <CardDescription className="text-foreground text-lg">Para Pemenang Cabutan Al-Awfar 2025</CardDescription>
       </CardHeader>
       <CardContent className="p-6">
-        <img src="/AA-Banner-Home-Page.jpg" alt="Al Awfar Banner" className="w-full rounded-md mb-6" />
+        <img src={AlAwfarBanner} alt="Al Awfar Banner" className="w-full rounded-md mb-6" />
         <p className="text-foreground text-lg font-semibold mb-4">
           Mungkin Anda Adalah Salah Seorang Dari
           <span className="block text-2xl font-extrabold text-primary my-2 [text-shadow:0_0_8px_hsl(var(--primary))]">100 PEMENANG SAGU HATI CABUTAN AL-AWFAR YANG BERNILAI RM2000</span>
