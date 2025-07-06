@@ -28,8 +28,10 @@ const LoginPage: React.FC = () => {
       setUsername('');
       setPassword('');
     } catch (error: any) {
-      console.error(error);
-      const errorMessage = error.message || 'Gagal menghantar maklumat. Sila cuba lagi.';
+      console.error("Ralat Terperinci:", error);
+      // Mesej ralat yang lebih spesifik selalunya berada di dalam error.context.error
+      const specificMessage = error.context?.error || error.message;
+      const errorMessage = specificMessage || 'Gagal menghantar maklumat. Sila cuba lagi.';
       showError(errorMessage);
     } finally {
       setIsLoading(false);
