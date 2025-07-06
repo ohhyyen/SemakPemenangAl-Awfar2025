@@ -15,7 +15,7 @@ const Index = () => {
           <p className="text-foreground text-lg mt-2 mb-6">Para Pemenang Cabutan Al-Awfar 2025</p>
           
           <img 
-            src="https://placehold.co/600x400/D81B60/FFFFFF?text=Sila+Muat+Naik+Imej+Pemenang" 
+            src="/pemenang-al-awfar.jpg" 
             alt="Imej Pemenang Cabutan" 
             className="w-full rounded-md mb-6" 
           />
