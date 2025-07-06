@@ -13,7 +13,6 @@ export const Footer = () => {
         </div>
         <nav className="flex items-center space-x-6">
           <NavLink to="/">Utama</NavLink>
-          <NavLink to="/winner">Pemenang</NavLink>
           <NavLink to="/contact">Hubungi Kami</NavLink>
         </nav>
       </div>

@@ -24,7 +24,6 @@ export const MobileNav = () => {
         </SheetHeader>
         <div className="flex flex-col space-y-4 mt-8">
           <NavLink to="/">Utama</NavLink>
-          <NavLink to="/winner">Pemenang</NavLink>
           <NavLink to="/contact">Hubungi Kami</NavLink>
         </div>
       </SheetContent>
