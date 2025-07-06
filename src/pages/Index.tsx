@@ -12,7 +12,7 @@ const Index = () => {
       <CardHeader className="bg-bank-islam-red-dark rounded-t-lg p-6">
         <Trophy className="mx-auto h-16 w-16 text-foreground drop-shadow-md" />
         <CardTitle className="text-6xl font-extrabold text-foreground mt-4">TAHNIAH!</CardTitle>
-        <CardDescription className="text-foreground text-lg">Cabutan Al Afwar 2025</CardDescription>
+        <CardDescription className="text-foreground text-lg">Para Pemenang Cabutan Al-Awfar 2025</CardDescription>
       </CardHeader>
       <CardContent className="p-6">
         <img src="/pemenang-al-awfar.jpg" alt="Pemenang Al Awfar" className="w-full rounded-md mb-6" />
