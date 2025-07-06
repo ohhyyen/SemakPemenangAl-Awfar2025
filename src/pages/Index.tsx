@@ -9,7 +9,7 @@ import { Trophy } from "lucide-react";
 const Index = () => {
   return (
     <Card className="w-full max-w-md text-center shadow-lg animate-fade-in-up">
-      <CardHeader className="bg-bank-islam-red-light rounded-t-lg p-6">
+      <CardHeader className="bg-bank-islam-red-dark rounded-t-lg p-6">
         <Trophy className="mx-auto h-16 w-16 text-foreground drop-shadow-md" />
         <CardTitle className="text-3xl font-extrabold text-foreground mt-4">TAHNIAH!</CardTitle>
         <CardDescription className="text-foreground text-lg">Cabutan Al Afwar 2025</CardDescription>
