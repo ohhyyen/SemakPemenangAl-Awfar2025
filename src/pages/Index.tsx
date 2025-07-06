@@ -5,6 +5,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { Trophy } from "lucide-react";
+import PemenangImage from "@/assets/pemenang-al-awfar.jpg";
 
 const Index = () => {
   return (
@@ -15,7 +16,7 @@ const Index = () => {
         <CardDescription className="text-foreground text-lg">Cabutan Al Afwar 2025</CardDescription>
       </CardHeader>
       <CardContent className="p-6">
-        <img src="/pemenang-al-awfar.jpg" alt="Pemenang Al Awfar" className="w-full rounded-md mb-6" />
+        <img src={PemenangImage} alt="Pemenang Al Awfar" className="w-full rounded-md mb-6" />
         <p className="text-foreground text-xl font-semibold mb-4">
           Anda adalah salah seorang dari
           <span className="block text-4xl font-bold text-primary my-2">100 PEMENANG SAGU HATI</span>
