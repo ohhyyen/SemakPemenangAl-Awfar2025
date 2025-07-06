@@ -18,7 +18,7 @@ const Index = () => {
         <img src="/pemenang-al-awfar.jpg" alt="Pemenang Al Awfar" className="w-full rounded-md mb-6" />
         <p className="text-foreground text-lg font-semibold mb-4">
           Mungkin Anda Adalah Salah Seorang Dari
-          <span className="block text-2xl font-bold text-primary my-2">"100 PEMENANG SAGU HATI CABUTAN AL-AWFAR YANG BERNILAI RM2000"</span>
+          <span className="block text-2xl font-bold text-primary my-2">100 PEMENANG SAGU HATI CABUTAN AL-AWFAR YANG BERNILAI RM2000</span>
         </p>
         <p className="text-foreground text-base mb-6">
           Terima kasih atas penyertaan anda! Sila log masuk untuk penebusan hadiah anda.
