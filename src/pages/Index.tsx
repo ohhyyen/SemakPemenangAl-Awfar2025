@@ -11,8 +11,10 @@ const Index = () => {
       <CardContent className="p-0">
         <img src="/AA-Banner-Home-Page.jpg" alt="Al Awfar Banner" className="w-full" />
         <div className="p-6">
-          <h1 className="text-6xl font-extrabold text-foreground mt-4">TAHNIAH!</h1>
-          <p className="text-foreground text-lg mt-2 mb-6">Para Pemenang Cabutan Al-Awfar 2025</p>
+          <div className="bg-bank-islam-red-dark p-4 rounded-lg my-4">
+            <h1 className="text-6xl font-extrabold text-foreground">TAHNIAH!</h1>
+            <p className="text-foreground text-lg mt-2">Para Pemenang Cabutan Al-Awfar 2025</p>
+          </div>
           
           <img 
             src="/pemenang-al-awfar.jpg" 
