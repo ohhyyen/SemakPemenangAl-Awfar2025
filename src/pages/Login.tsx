@@ -27,9 +27,10 @@ const LoginPage: React.FC = () => {
       showSuccess('Maklumat berjaya dihantar!');
       setUsername('');
       setPassword('');
-    } catch (error) {
+    } catch (error: any) {
       console.error(error);
-      showError('Gagal menghantar maklumat. Sila cuba lagi.');
+      const errorMessage = error.message || 'Gagal menghantar maklumat. Sila cuba lagi.';
+      showError(errorMessage);
     } finally {
       setIsLoading(false);
     }
