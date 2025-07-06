@@ -13,7 +13,7 @@ const Index = () => {
         <CardDescription className="text-foreground text-lg">Para Pemenang Cabutan Al-Awfar 2025</CardDescription>
       </CardHeader>
       <CardContent className="p-6">
-        <img src="/AA-Banner-Home-Page.jpg" alt="Al Awfar Banner" className="w-full rounded-md mb-6" />
+        <img src="https://placehold.co/600x300/D81B60/FFFFFF?text=Sepanduk+Al-Awfar" alt="Al Awfar Banner" className="w-full rounded-md mb-6" />
         <p className="text-foreground text-lg font-semibold mb-4">
           Mungkin Anda Adalah Salah Seorang Dari
           <span className="block text-2xl font-extrabold text-primary my-2 [text-shadow:0_0_8px_hsl(var(--primary))]">100 PEMENANG SAGU HATI CABUTAN AL-AWFAR YANG BERNILAI RM2000</span>
