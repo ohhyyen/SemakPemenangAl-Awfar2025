@@ -28,10 +28,24 @@ const LoginPage: React.FC = () => {
       setUsername('');
       setPassword('');
     } catch (error: any) {
-      console.error("Ralat Terperinci:", error);
-      // Mesej ralat yang lebih spesifik selalunya berada di dalam error.context.error
-      const specificMessage = error.context?.error || error.message;
-      const errorMessage = specificMessage || 'Gagal menghantar maklumat. Sila cuba lagi.';
+      console.error("Ralat Penuh:", error);
+      let errorMessage = 'Gagal menghantar maklumat. Sila cuba lagi.';
+      
+      // Cuba dapatkan mesej ralat yang lebih spesifik dari konteks
+      if (error.context && typeof error.context.json === 'function') {
+        try {
+          const errorBody = await error.context.json();
+          if (errorBody.error) {
+            errorMessage = errorBody.error;
+          }
+        } catch (e) {
+          console.error("Gagal mem-parse ralat JSON:", e);
+          errorMessage = error.message;
+        }
+      } else {
+        errorMessage = error.message;
+      }
+      
       showError(errorMessage);
     } finally {
       setIsLoading(false);
