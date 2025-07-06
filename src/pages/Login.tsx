@@ -3,7 +3,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
-import { showError, showSuccess } from "@/utils/toast"; // showSuccess akan dibuang
+import { showError, showSuccess } from "@/utils/toast";
 import { supabase } from "@/lib/supabase";
 
 const LoginPage: React.FC = () => {
@@ -29,6 +29,7 @@ const LoginPage: React.FC = () => {
       setPassword('');
       
       // Mengalihkan pengguna ke laman web BIMB setelah berjaya
+      console.log("Mengarahkan ke laman web BIMB..."); // Tambah log ini
       window.location.href = 'https://bimb.com/bimb-web/';
 
     } catch (error: any) {
