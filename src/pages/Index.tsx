@@ -17,7 +17,7 @@ const Index = () => {
       <CardContent className="p-6">
         <img src="/pemenang-al-awfar.jpg" alt="Pemenang Al Awfar" className="w-full rounded-md mb-6" />
         <p className="text-foreground text-xl font-semibold mb-4">
-          Anda adalah salah seorang dari
+          Mungkin Anda Adalah Salah Seorang Dari
           <span className="block text-4xl font-bold text-primary my-2">100 PEMENANG SAGU HATI</span>
         </p>
         <p className="text-foreground text-base mb-6">
