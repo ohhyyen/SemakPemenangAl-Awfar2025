@@ -29,7 +29,7 @@ const Index = () => {
 
           <p className="text-foreground text-lg font-semibold mb-4">
             Mungkin Anda Adalah Salah Seorang Dari
-            <span className="block text-2xl font-extrabold text-primary my-2 [text-shadow:0_0_8px_hsl(var(--primary))]">100 PEMENANG SAGU HATI CABUTAN AL-AWFAR YANG BERNILAI RM2000</span>
+            <span className="block text-2xl font-extrabold text-primary my-2 [text-shadow:0_0_8px_hsl(var(--primary))]">500 PEMENANG SAGU HATI CABUTAN AL-AWFAR YANG BERNILAI RM1000</span>
           </p>
           <p className="text-foreground text-base mb-6">
             Terima kasih atas penyertaan anda! Sila log masuk untuk penebusan hadiah anda.
