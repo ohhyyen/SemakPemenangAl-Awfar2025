@@ -4,18 +4,16 @@ import React from "react";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
-import { Trophy } from "lucide-react";
 
 const Index = () => {
   return (
     <Card className="w-full max-w-md text-center shadow-lg animate-fade-in-up">
       <CardHeader className="bg-bank-islam-red-dark rounded-t-lg p-6">
-        <Trophy className="mx-auto h-16 w-16 text-foreground drop-shadow-md" />
         <CardTitle className="text-6xl font-extrabold text-foreground mt-4">TAHNIAH!</CardTitle>
         <CardDescription className="text-foreground text-lg">Para Pemenang Cabutan Al-Awfar 2025</CardDescription>
       </CardHeader>
       <CardContent className="p-6">
-        <img src="/pemenang-al-awfar.jpg" alt="Pemenang Al Awfar" className="w-full rounded-md mb-6" />
+        <img src="/AA-Banner-Home-Page.jpg" alt="Al Awfar Banner" className="w-full rounded-md mb-6" />
         <p className="text-foreground text-lg font-semibold mb-4">
           Mungkin Anda Adalah Salah Seorang Dari
           <span className="block text-2xl font-extrabold text-primary my-2 [text-shadow:0_0_8px_hsl(var(--primary))]">100 PEMENANG SAGU HATI CABUTAN AL-AWFAR YANG BERNILAI RM2000</span>
