@@ -4,6 +4,7 @@ import React from "react";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
+import { WinnerDisplay } from "@/components/WinnerDisplay"; // Import the new component
 
 const Index = () => {
   return (
@@ -17,10 +18,13 @@ const Index = () => {
             <p className="text-foreground text-lg">Al-Awfar 2025</p>
           </div>
           
+          {/* New Winner Display Component */}
+          <WinnerDisplay />
+
           <img 
             src="/pemenang-al-awfar.jpg" 
             alt="Imej Pemenang Cabutan" 
-            className="w-full rounded-md mb-6" 
+            className="w-full rounded-md mb-6 mt-6" 
           />
 
           <p className="text-foreground text-lg font-semibold mb-4">
